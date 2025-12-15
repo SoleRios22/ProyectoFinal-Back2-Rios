@@ -1,0 +1,82 @@
+# Ecommerce Backend – Proyecto Final
+
+Servidor backend desarrollado en Node.js como proyecto final del curso.  
+Implementa un ecommerce con autenticación, autorización por roles y una arquitectura profesional basada en buenas prácticas.
+
+---
+
+## 🚀 Tecnologías
+
+- Node.js / Express
+- MongoDB + Mongoose
+- Passport + JWT
+- bcrypt
+- Nodemailer
+- Express Handlebars
+- dotenv
+
+---
+
+## 🧱 Arquitectura
+
+El proyecto está organizado en capas:
+
+- **Models**: esquemas de MongoDB
+- **DAO**: acceso a datos
+- **Repositories**: patrón Repository
+- **Services**: lógica de negocio
+- **Routes**: endpoints de la API
+- **Middlewares**: autenticación y autorización
+- **DTOs**: transferencia segura de datos
+- **Views**: Handlebars
+
+---
+
+## 🔐 Autenticación y Roles
+
+- Login con JWT
+- Estrategia Passport `current`
+- Endpoint `/api/sessions/current` devuelve un DTO sin datos sensibles
+- Autorización por roles:
+  - **Admin**: crear, actualizar y eliminar productos
+  - **User**: agregar productos al carrito y realizar compras
+
+---
+
+## 🛒 Compras y Tickets
+
+- Carrito asociado a cada usuario
+- Validación de stock al comprar
+- Generación de Ticket con código único, fecha, monto y comprador
+
+---
+
+## 🔁 Recuperación de Contraseña
+
+- Envío de email con enlace de recuperación
+- Token con expiración de 1 hora
+- No permite reutilizar contraseñas anteriores
+
+---
+
+## 🎨 Vistas
+
+- Home
+- Login
+- Registro
+- Recuperación de contraseña  
+(Vistas implementadas con Handlebars)
+
+---
+
+## ⚙️ Variables de Entorno
+
+```env
+PORT=8080
+MONGO_URI=mongodb+srv://soledadrios38_db_user:504D2oImIGnlN8ep@cluster01.bokkn4b.mongodb.net/EcommerceBack2?retryWrites=true&w=majority&appName=Cluster01
+JWT_SECRET=secreto
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=587
+MAIL_USER=usuario
+MAIL_PASS=password
+APP_URL=http://localhost:8080
