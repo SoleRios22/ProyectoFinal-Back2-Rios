@@ -1,0 +1,46 @@
+<h1>Ecommerce Backend</h1>
+
+<p>Servidor funcionando correctamente.</p>
+
+<hr>
+
+<h2>Autenticación</h2>
+
+<ul>
+  <li>
+    <a href="/api/sessions/login">Login</a>
+  </li>
+  <li>
+    <a href="/api/sessions/register">Registro</a>
+  </li>
+</ul>
+
+<hr>
+
+<h2>Acciones protegidas (requieren JWT)</h2>
+
+<p>
+  Estas rutas se prueban desde Postman o frontend usando el token:
+</p>
+
+<ul>
+  <li><strong>GET</strong> /api/sessions/current</li>
+  <li><strong>POST</strong> /api/products (solo admin)</li>
+  <li><strong>PUT</strong> /api/products/:id (solo admin)</li>
+  <li><strong>DELETE</strong> /api/products/:id (solo admin)</li>
+  <li><strong>POST</strong> /api/carts/:cid/purchase (solo user)</li>
+</ul>
+
+<hr>
+
+<h2>Recuperación de contraseña</h2>
+
+<form method="post" action="/api/password/recover">
+  <input type="email" name="email" placeholder="Email del usuario" required>
+  <button type="submit">Enviar mail de recuperación</button>
+</form>
+
+<hr>
+
+<p style="color: #777; font-size: 14px">
+  Proyecto final backend – Arquitectura profesional, JWT, Passport, Roles, Repository, DTO, Handleb

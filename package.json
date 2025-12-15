@@ -1,0 +1,29 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "proyecto final",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "María Soledad Rios",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.1",
+    "nodemailer": "^7.0.11",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
