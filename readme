@@ -73,7 +73,7 @@ El proyecto está organizado en capas:
 
 ```env
 PORT=8080
-MONGO_URI=mongodb+srv://soledadrios38_db_user:504D2oImIGnlN8ep@cluster01.bokkn4b.mongodb.net/EcommerceBack2?retryWrites=true&w=majority&appName=Cluster01
+MONGO_URI=
 JWT_SECRET=secreto
 MAIL_HOST=smtp.mailtrap.io
 MAIL_PORT=587
